@@ -507,19 +507,19 @@ footer>div {
     margin: 12px;
 }
 /* Форма для подписки */
-.form-sign {
-    display: flex;
-}
-
-.sign {
+.footer-form {
     display: flex;
     flex-direction: column;
     margin-left: 93px;
-    
+}
+.form-sign {
+    display: flex;
+    align-content: center;
+    padding-top: 20px;
 }
 
 .sign-title {
-    display: inline-block;
+    display: block;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
@@ -530,10 +530,9 @@ footer>div {
     color: var(--background-color-white);
 }
 
-.sign input {
+.form-sign input {
     width: 358px;
     height: 50px;
-    margin-top: 20px;
     padding: 15px;
 
     background-color: #2F303A;
@@ -541,6 +540,8 @@ footer>div {
     box-sizing: border-box;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;;
+
+    color: var(--background-color-white);
 }
 
 .send {
@@ -554,7 +555,6 @@ footer>div {
     height: 50px;
 
     margin-left: 12px;
-    margin-top: 36px;
 
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
@@ -730,14 +730,17 @@ footer>div {
   }
   .comment {
     padding: 12px 16px;
+}
 
+  .comment:placeholder-shown {
     font-family: Roboto;
     font-weight: normal;
-    font-size: 12px;
-    line-height: 1.17;
+    font-size: 14px;
+    line-height: 1,14;
     letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-}
+    color: rgba(117, 117, 117, 0.5);        
+    }
+
     .form-checkbox {
         display: flex;
         align-items: center;
@@ -753,7 +756,7 @@ footer>div {
         height: 1px;
         margin: -1px;
     }
-    .icon {
+    .checkbox-text::before {
         content: '';
         margin-right: 7px;
         display: inline-block;
@@ -765,7 +768,7 @@ footer>div {
         
     }
 
-    .checkbox:checked + .icon {
+    .checkbox:checked + .checkbox-text::before {
         background-color: var(--hover-color);
         background-image: url(../images/icon-check.svg);
         background-size: contain;
